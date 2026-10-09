@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Cadastre-se como voluntário do Instituto Aruana e ajude a proteger a fauna brasileira."
+  >
+
+  <title>Cadastro | Instituto Aruana</title>
+
+  <link rel="stylesheet" href="css/cadastro.css">
+  <script src="js/cadastro.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a href="index.html" class="logo">Instituto Aruana</a>
+
+    <button
+      class="menu-btn"
+      id="menu-btn"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu"
+      type="button"
+    >
+      ☰
+    </button>
+
+    <nav id="menu" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+      <a href="projetos.html">Projetos</a>
+      <a href="projetos.html#casos">Casos reais</a>
+      <a href="cadastro.html" class="ativo" aria-current="page">
+        Seja voluntário
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <form class="formulario" id="form-cadastro">
+      <h1>Crie sua conta</h1>
+
+      <div class="detalhe" aria-hidden="true"></div>
+
+      <p class="descricao">
+        Faça parte da ARUANA e ajude a proteger espécies ameaçadas.
+      </p>
+
+      <fieldset>
+        <legend>Dados pessoais</legend>
+
+        <div class="linha">
+          <div class="campo">
+            <label for="nome">Nome completo</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Digite seu nome"
+              autocomplete="name"
+              minlength="3"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="seuemail@email.com"
+              autocomplete="email"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="linha">
+          <div class="campo">
+            <label for="cpf">CPF</label>
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              placeholder="000.000.000-00"
+              inputmode="numeric"
+              maxlength="14"
+              autocomplete="off"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="tel">Telefone</label>
+            <input
+              type="tel"
+              id="tel"
+              name="telefone"
+              placeholder="(11) 99999-9999"
+              inputmode="tel"
+              maxlength="15"
+              autocomplete="tel"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="data">Data de nascimento</label>
+          <input
+            type="date"
+            id="data"
+            name="dataNascimento"
+            autocomplete="bday"
+            required
+          >
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Endereço</legend>
+
+        <div class="linha">
+          <div class="campo">
+            <label for="cep">CEP</label>
+            <input
+              type="text"
+              id="cep"
+              name="cep"
+              placeholder="00000-000"
+              inputmode="numeric"
+              maxlength="9"
+              autocomplete="postal-code"
+              required
+            >
+          </div>
+
+          <div class="campo">
+            <label for="cdd">Cidade</label>
+            <input
+              type="text"
+              id="cdd"
+              name="cidade"
+              placeholder="Sua cidade"
+              autocomplete="address-level2"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="campo">
+          <label for="ender">Endereço</label>
+          <input
+            type="text"
+            id="ender"
+            name="endereco"
+            placeholder="Rua, número e complemento"
+            autocomplete="street-address"
+            required
+          >
+        </div>
+
+        <div class="campo">
+          <label for="estado">Estado</label>
+          <select
+            id="estado"
+            name="estado"
+            autocomplete="address-level1"
+            required
+          >
+            <option value="">Selecione seu estado</option>
+            <option value="AC">Acre</option>
+            <option value="AL">Alagoas</option>
+            <option value="AP">Amapá</option>
+            <option value="AM">Amazonas</option>
+            <option value="BA">Bahia</option>
+            <option value="CE">Ceará</option>
+            <option value="DF">Distrito Federal</option>
+            <option value="ES">Espírito Santo</option>
+            <option value="GO">Goiás</option>
+            <option value="MA">Maranhão</option>
+            <option value="MT">Mato Grosso</option>
+            <option value="MS">Mato Grosso do Sul</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="PA">Pará</option>
+            <option value="PB">Paraíba</option>
+            <option value="PR">Paraná</option>
+            <option value="PE">Pernambuco</option>
+            <option value="PI">Piauí</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="RN">Rio Grande do Norte</option>
+            <option value="RS">Rio Grande do Sul</option>
+            <option value="RO">Rondônia</option>
+            <option value="RR">Roraima</option>
+            <option value="SC">Santa Catarina</option>
+            <option value="SP">São Paulo</option>
+            <option value="SE">Sergipe</option>
+            <option value="TO">Tocantins</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Segurança</legend>
+
+        <div class="campo">
+          <label for="senha">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Mínimo 8 caracteres"
+            minlength="8"
+            autocomplete="new-password"
+            required
+          >
+        </div>
+      </fieldset>
+
+      <div class="termos">
+        <input
+          type="checkbox"
+          id="termos"
+          name="termos"
+          required
+        >
+
+        <label for="termos">
+          Aceito os termos de uso e a política de privacidade da ARUANA.
+        </label>
+      </div>
+
+      <button class="botao-enviar" type="submit">
+        Criar conta
+      </button>
+
+      <p
+        class="mensagem-sucesso"
+        id="mensagem-sucesso"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></p>
+    </form>
+  </main>
+
+  <footer class="rodape">
+    <p>
+      <strong>Instituto Aruana</strong> — Protegendo a fauna e a natureza
+    </p>
+
+    <small>
+      &copy; 2026 Instituto Aruana. Projeto acadêmico demonstrativo.
+    </small>
+  </footer>
+
+</body>
+</html>

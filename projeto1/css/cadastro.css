@@ -1,0 +1,298 @@
+:root {
+  --verde: #2f5d3a;
+  --verde-claro: #dfeede;
+  --amarelo: #f2b84b;
+  --amarelo-escuro: #e0a532;
+  --fundo: #f4f7f2;
+  --texto: #2b2b2b;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.6;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--amarelo);
+  outline-offset: 3px;
+}
+
+.topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: var(--verde);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: 2px solid var(--verde-claro);
+  color: #fff;
+  font-size: 1.4rem;
+  padding: 2px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.topo nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 28px;
+}
+
+.topo nav a {
+  color: var(--verde-claro);
+  font-size: 1rem;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.topo nav a:hover,
+.topo nav a.ativo {
+  color: #fff;
+  border-bottom-color: var(--amarelo);
+}
+
+main {
+  max-width: 940px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.formulario {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--sombra);
+  text-align: left;
+}
+
+.formulario h1 {
+  color: var(--verde);
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.detalhe {
+  width: 42px;
+  height: 3px;
+  background: var(--amarelo);
+  border-radius: 2px;
+  margin: 0 auto 20px;
+}
+
+.descricao {
+  color: #718078;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 25px;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  width: 100%;
+  color: var(--verde);
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  padding-top: 10px;
+}
+
+.linha {
+  display: flex;
+  gap: 20px;
+}
+
+.campo {
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.campo input,
+.campo select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d5d8d2;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--texto);
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus,
+.campo select:focus {
+  border-color: var(--verde);
+  outline: none;
+}
+
+.campo input:invalid:focus,
+.campo select:invalid:focus {
+  border-color: #b42318;
+}
+
+.termos {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 5px 0 24px;
+}
+
+.termos input {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  margin-top: 4px;
+  accent-color: var(--verde);
+}
+
+.termos label {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.botao-enviar {
+  display: block;
+  margin: 0 auto;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  background: var(--verde);
+  color: #fff;
+  font: inherit;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.botao-enviar:hover {
+  background: #244832;
+}
+
+.mensagem-sucesso {
+  margin-top: 24px;
+  padding: 14px;
+  border-radius: 6px;
+  background: var(--verde-claro);
+  color: var(--verde);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.mensagem-sucesso[hidden] {
+  display: none;
+}
+
+.rodape {
+  background: var(--verde);
+  color: var(--verde-claro);
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 13px;
+}
+
+.rodape p {
+  margin-bottom: 4px;
+}
+
+.rodape small {
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .topo nav {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .topo nav.aberto {
+    display: flex;
+  }
+
+  main {
+    margin: 24px auto;
+    padding: 0 14px;
+  }
+
+  .formulario {
+    padding: 25px 20px;
+  }
+
+  .formulario h1 {
+    font-size: 25px;
+  }
+
+  .linha {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .campo {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}

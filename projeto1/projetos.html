@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Conheça os projetos do Instituto Aruana para proteger animais ameaçados de extinção."
+  >
+
+  <title>Projetos | Instituto Aruana</title>
+
+  <link rel="stylesheet" href="css/projetos.css">
+  <script src="js/projetos.js" defer></script>
+</head>
+
+<body>
+
+  <header class="topo">
+    <a href="index.html" class="logo">Instituto Aruana</a>
+
+    <button
+      class="menu-btn"
+      id="menu-btn"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+      aria-controls="menu"
+      type="button"
+    >
+      ☰
+    </button>
+
+    <nav id="menu" aria-label="Menu principal">
+      <a href="index.html">Início</a>
+
+      <a
+        href="projetos.html"
+        class="ativo"
+        aria-current="page"
+      >
+        Projetos
+      </a>
+
+      <a href="#casos">Casos reais</a>
+
+      <a href="cadastro.html">Seja voluntário</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Nossos Projetos</h1>
+
+    <p>
+      Ações de conservação para proteger a fauna ameaçada e os ambientes
+      onde ela vive.
+    </p>
+  </section>
+
+  <main class="container">
+
+    <section aria-labelledby="titulo-projetos">
+
+      <h2 class="titulo-secao" id="titulo-projetos">
+        O que fazemos
+      </h2>
+
+      <div
+        class="filtros"
+        role="group"
+        aria-label="Filtrar projetos"
+      >
+        <button
+          class="filtro ativo"
+          data-filtro="todos"
+          aria-pressed="true"
+          type="button"
+        >
+          Todos
+        </button>
+
+        <button
+          class="filtro"
+          data-filtro="pesquisa"
+          aria-pressed="false"
+          type="button"
+        >
+          Pesquisa
+        </button>
+
+        <button
+          class="filtro"
+          data-filtro="restauracao"
+          aria-pressed="false"
+          type="button"
+        >
+          Restauração
+        </button>
+
+        <button
+          class="filtro"
+          data-filtro="resgate"
+          aria-pressed="false"
+          type="button"
+        >
+          Resgate
+        </button>
+
+        <button
+          class="filtro"
+          data-filtro="educacao"
+          aria-pressed="false"
+          type="button"
+        >
+          Educação
+        </button>
+      </div>
+
+      <div class="grade" id="grade-projetos">
+
+        <article class="card" data-categoria="pesquisa">
+          <div class="card-img">
+            <img
+              src="imagens/onca-projeto.png"
+              alt="Onça-pintada na mata"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <span class="tag">Pesquisa</span>
+
+            <h3>Projeto Onça-Pintada</h3>
+
+            <p>
+              Monitoramento com armadilhas fotográficas e proteção de
+              corredores ecológicos para o maior felino das Américas.
+            </p>
+
+            <a href="#" class="botao">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="restauracao">
+          <div class="card-img">
+            <img
+              src="imagens/cerrado.png"
+              alt="Paisagem do Cerrado"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <span class="tag">Restauração</span>
+
+            <h3>Recuperação do Cerrado</h3>
+
+            <p>
+              Reflorestamento de áreas degradadas com espécies nativas,
+              devolvendo abrigo e alimento à fauna.
+            </p>
+
+            <a href="#" class="botao">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="pesquisa">
+          <div class="card-img">
+            <img
+              src="imagens/ave.png"
+              alt="Ave silvestre"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <span class="tag">Pesquisa</span>
+
+            <h3>Proteção das Aves</h3>
+
+            <p>
+              Estudo de populações e proteção de ninhos de aves ameaçadas
+              de extinção.
+            </p>
+
+            <a href="#" class="botao">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="resgate">
+          <div class="card-img">
+            <img
+              src="imagens/animal-silvestre.png"
+              alt="Animal silvestre resgatado"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <span class="tag">Resgate</span>
+
+            <h3>Resgate de Animais Silvestres</h3>
+
+            <p>
+              Atendimento, reabilitação e soltura de animais vítimas de
+              tráfico, atropelamento e queimadas.
+            </p>
+
+            <a href="#" class="botao">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="educacao">
+          <div class="card-img">
+            <img
+              src="imagens/voluntario.png"
+              alt="Voluntários em atividade educativa"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <span class="tag">Educação</span>
+
+            <h3>Educação Ambiental</h3>
+
+            <p>
+              Palestras e oficinas em escolas e comunidades sobre a
+              importância de proteger a biodiversidade.
+            </p>
+
+            <a href="#" class="botao">Saiba mais</a>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="restauracao">
+          <div class="card-img">
+            <img
+              src="imagens/corredores-ecologicos.png"
+              alt="Corredor ecológico em área de mata"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <span class="tag">Restauração</span>
+
+            <h3>Corredores Ecológicos</h3>
+
+            <p>
+              Conexão de fragmentos de mata para que os animais circulem
+              com segurança e se reproduzam.
+            </p>
+
+            <a href="#" class="botao">Saiba mais</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section id="casos" aria-labelledby="titulo-casos">
+
+      <h2 class="titulo-secao" id="titulo-casos">
+        Casos reais de animais ameaçados
+      </h2>
+
+      <p class="intro">
+        Histórias de espécies brasileiras que mostram por que a
+        conservação importa.
+      </p>
+
+      <div class="grade">
+
+        <article class="card caso">
+          <div class="card-img">
+            <img
+              src="imagens/mico-leao-dourado.png"
+              alt="Mico-leão-dourado em árvore"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <h3>Mico-leão-dourado</h3>
+
+            <p>
+              Habitante da Mata Atlântica fluminense, chegou perto da
+              extinção pela perda de floresta. Com reprodução em
+              cativeiro, reintrodução e corredores de mata, teve sua
+              situação melhorada, um dos maiores exemplos de sucesso da
+              conservação brasileira.
+            </p>
+          </div>
+        </article>
+
+        <article class="card caso">
+          <div class="card-img">
+            <img
+              src="imagens/ararinha-azul.png"
+              alt="Ararinha-azul pousada"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <h3>Ararinha-azul</h3>
+
+            <p>
+              Nativa da Caatinga, foi considerada extinta na natureza por
+              anos. Aves criadas sob cuidado humano foram levadas de volta
+              à Bahia em um programa de reintrodução que acompanha cada
+              passo da espécie.
+            </p>
+          </div>
+        </article>
+
+        <article class="card caso">
+          <div class="card-img">
+            <img
+              src="imagens/tartaruga-marinha.png"
+              alt="Tartaruga-marinha na praia"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <h3>Tartarugas-marinhas</h3>
+
+            <p>
+              Ameaçadas pela pesca acidental, poluição e ocupação das
+              praias. O monitoramento de desovas e a proteção dos ninhos
+              no litoral brasileiro ajudam os filhotes a chegarem ao mar.
+            </p>
+          </div>
+        </article>
+
+        <article class="card caso">
+          <div class="card-img">
+            <img
+              src="imagens/lobo-guara.png"
+              alt="Lobo-guará no campo"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <h3>Lobo-guará</h3>
+
+            <p>
+              Símbolo do Cerrado, sofre com atropelamentos em rodovias e
+              com a conversão do habitat em lavouras e pastagens.
+            </p>
+          </div>
+        </article>
+
+        <article class="card caso">
+          <div class="card-img">
+            <img
+              src="imagens/tamandua-bandeira.png"
+              alt="Tamanduá-bandeira caminhando"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <h3>Tamanduá-bandeira</h3>
+
+            <p>
+              Vulnerável à extinção, é muito afetado por queimadas e
+              atropelamentos. Seu desaparecimento prejudica o controle
+              natural de cupins e formigas.
+            </p>
+          </div>
+        </article>
+
+        <article class="card caso">
+          <div class="card-img">
+            <img
+              src="imagens/peixe-boi.png"
+              alt="Peixe-boi-marinho na água"
+              loading="lazy"
+            >
+          </div>
+
+          <div class="card-texto">
+            <h3>Peixe-boi-marinho</h3>
+
+            <p>
+              Um dos mamíferos aquáticos mais ameaçados do Brasil.
+              Resgate de filhotes encalhados, reabilitação e soltura fazem
+              parte da luta para salvá-lo.
+            </p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="ajudar" aria-labelledby="titulo-ajudar">
+
+      <h2 class="titulo-secao" id="titulo-ajudar">
+        Como você pode ajudar
+      </h2>
+
+      <div class="passos">
+
+        <div class="passo">
+          <span>1</span>
+
+          <h3>Seja voluntário</h3>
+
+          <p>
+            Participe de ações de campo, eventos e educação ambiental.
+          </p>
+        </div>
+
+        <div class="passo">
+          <span>2</span>
+
+          <h3>Divulgue</h3>
+
+          <p>
+            Compartilhe nossos projetos e conscientize quem está perto
+            de você.
+          </p>
+        </div>
+
+        <div class="passo">
+          <span>3</span>
+
+          <h3>Consuma com consciência</h3>
+
+          <p>
+            Nunca compre animais silvestres e evite produtos de origem
+            ilegal.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="chamada">
+
+      <img
+        src="imagens/voluntario.png"
+        alt="Voluntários em ação"
+        loading="lazy"
+      >
+
+      <h2>Quer fazer parte?</h2>
+
+      <p>
+        Cadastre-se como voluntário e ajude a proteger a natureza.
+      </p>
+
+      <a href="cadastro.html" class="botao">
+        Quero ajudar
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <p>
+      &copy; 2026 Instituto Aruana. Todos os direitos reservados.
+    </p>
+  </footer>
+
+</body>
+</html>
