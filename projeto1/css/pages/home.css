@@ -1,0 +1,60 @@
+/* ==========================================================
+   PÁGINA INICIAL
+   Layouts: hero dividido (texto + imagem), grids de cards,
+   bloco de texto central e chamada final.
+   ========================================================== */
+
+.faixa-aviso { padding-block: var(--esp-2); background: var(--cor-superficie); border-bottom: 1px solid var(--cor-borda); }
+
+/* ----- Hero dividido ----- */
+.hero {
+  padding-block: var(--esp-4);
+}
+
+.hero__caixa {
+  padding: var(--esp-3);
+  background: var(--cor-primaria-700);
+  background-image: linear-gradient(135deg, var(--cor-primaria-700), var(--cor-primaria-900));
+  color: #fff;
+  border-radius: var(--raio-lg);
+  box-shadow: var(--sombra-lg);
+}
+
+.hero h1 { margin: var(--esp-1) 0 var(--esp-2); color: #fff; }
+.hero p  { color: var(--cor-primaria-100); font-size: var(--fs-md); }
+.hero .botoes { margin-top: var(--esp-3); }
+
+.hero__imagem {
+  width: 100%;
+  aspect-ratio: 14 / 9;
+  object-fit: cover;
+  border-radius: var(--raio-md);
+}
+
+@media (min-width: 768px) {
+  .hero { padding-block: var(--esp-6); }
+  .hero__caixa { padding: var(--esp-6); }
+}
+
+/* ----- Texto central ----- */
+.texto-central {
+  max-width: 760px;
+  margin: var(--esp-3) auto 0;
+  text-align: center;
+  font-size: var(--fs-md);
+}
+
+/* ----- Chamada final (CTA) ----- */
+.convite {
+  padding-block: var(--esp-6);
+  background: var(--cor-primaria-100);
+  text-align: center;
+}
+
+.convite p {
+  max-width: 640px;
+  margin: var(--esp-2) auto var(--esp-3);
+  font-size: var(--fs-md);
+}
+
+.cabecalho-secao { margin-bottom: var(--esp-4); }

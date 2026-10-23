@@ -1,0 +1,133 @@
+/* ==========================================================
+   CARDS RESPONSIVOS
+   .cartao (base) + modificadores:
+   --projeto  imagem no topo, corpo e rodapé com ação
+   --caso     igual ao projeto, sem ação
+   --principio  card de texto com destaque lateral
+   --icone    card com ícone circular
+   ========================================================== */
+
+.cartao {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  box-shadow: var(--sombra-sm);
+  transition: transform var(--transicao), box-shadow var(--transicao);
+}
+
+.cartao:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra-md);
+}
+
+.cartao__img {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--cor-primaria-100);
+}
+
+.cartao__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cartao:hover .cartao__img img { transform: scale(1.05); }
+
+.cartao__corpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+}
+
+.cartao__titulo {
+  font-size: var(--fs-lg);
+  color: var(--cor-primaria-700);
+}
+
+.cartao__texto { color: var(--cor-texto-suave); }
+
+.cartao__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-1);
+}
+
+.cartao__rodape {
+  margin-top: auto;
+  padding-top: var(--esp-2);
+}
+
+/* --- Princípio: texto com borda dourada --- */
+.cartao--principio {
+  padding: var(--esp-3);
+  border-top: 4px solid var(--cor-secundaria-500);
+}
+
+/* --- Ícone circular --- */
+.cartao--icone {
+  align-items: flex-start;
+  gap: var(--esp-1);
+  padding: var(--esp-3);
+}
+
+.cartao__icone {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: var(--esp-1);
+  background: var(--cor-primaria-100);
+  border-radius: 50%;
+  font-size: var(--fs-lg);
+}
+
+/* --- Horizontal em telas médias+ (usado em destaques) --- */
+@media (min-width: 768px) {
+  .cartao--horizontal { flex-direction: row; }
+  .cartao--horizontal .cartao__img { flex: 0 0 42%; aspect-ratio: auto; }
+}
+
+/* Cards ocultos pelo filtro de projetos */
+.cartao-item.oculto { display: none !important; }
+.cartao-item { animation: card-entrada 0.35s ease both; }
+
+@keyframes card-entrada {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Passos ("Como você pode ajudar") ---------- */
+.passo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-1);
+  height: 100%;
+  padding: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+  text-align: center;
+}
+
+.passo__numero {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  background: var(--cor-secundaria-500);
+  color: var(--cor-primaria-900);
+  border-radius: 50%;
+  font-size: var(--fs-lg);
+  font-weight: var(--peso-forte);
+}
+
+.passo p { color: var(--cor-texto-suave); }

@@ -1,0 +1,81 @@
+/* ==========================================================
+   PÁGINA "SISTEMA DE DESIGN" — documentação visual dos tokens
+   ========================================================== */
+
+.doc-secao { padding-block: var(--esp-4); border-bottom: 1px solid var(--cor-borda); }
+.doc-secao:last-child { border-bottom: 0; }
+.doc-secao > h2 { margin-bottom: var(--esp-1); }
+.doc-secao > p  { margin-bottom: var(--esp-3); color: var(--cor-texto-suave); }
+.doc-secao h3   { margin: var(--esp-3) 0 var(--esp-1); font-size: var(--fs-md); }
+
+/* Amostras de cor */
+.amostra {
+  overflow: hidden;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+}
+
+.amostra__cor { height: 72px; background: var(--cor); }
+.amostra__info { padding: var(--esp-1) var(--esp-2); font-size: var(--fs-xs); }
+.amostra__info strong { display: block; font-size: var(--fs-sm); }
+.amostra__info code { color: var(--cor-texto-suave); }
+
+/* Escala tipográfica */
+.escala { display: grid; gap: var(--esp-2); }
+
+.escala__linha {
+  display: grid;
+  gap: 4px;
+  padding-bottom: var(--esp-1);
+  border-bottom: 1px dashed var(--cor-borda);
+}
+
+.escala__linha code { color: var(--cor-texto-suave); font-size: var(--fs-xs); }
+.escala__exemplo { font-weight: var(--peso-forte); color: var(--cor-primaria-700); line-height: 1.2; }
+
+@media (min-width: 768px) {
+  .escala__linha { grid-template-columns: 220px 1fr; align-items: baseline; }
+}
+
+/* Espaçamento */
+.espaco { display: flex; align-items: center; gap: var(--esp-2); margin-bottom: var(--esp-1); }
+.espaco code { flex: 0 0 150px; font-size: var(--fs-xs); }
+.espaco__barra { height: 20px; background: var(--cor-secundaria-500); border-radius: 4px; }
+
+/* Demonstração do grid */
+.demo-col {
+  padding: var(--esp-2);
+  background: var(--cor-primaria-100);
+  border: 1px dashed var(--cor-primaria-500);
+  border-radius: var(--raio-sm);
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: var(--peso-medio);
+}
+
+/* Tabelas */
+.tabela-rolavel { overflow-x: auto; }
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--cor-superficie);
+  font-size: var(--fs-sm);
+}
+
+.tabela th,
+.tabela td { padding: 10px var(--esp-2); border: 1px solid var(--cor-borda); text-align: left; }
+.tabela th { background: var(--cor-primaria-100); color: var(--cor-primaria-900); }
+
+/* Quadro de demonstração */
+.demo {
+  padding: var(--esp-3);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-md);
+}
+
+.demo--escuro { background: var(--cor-primaria-700); }
+.demo__rotulo { margin-bottom: var(--esp-1); color: var(--cor-texto-suave); font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.06em; }
+.demo--escuro .demo__rotulo { color: var(--cor-primaria-100); }

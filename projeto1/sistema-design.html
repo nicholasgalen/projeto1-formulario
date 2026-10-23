@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documentação visual do sistema de design do Instituto Aruana: cores, tipografia, grid e componentes.">
+  <title>Sistema de design | Instituto Aruana</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__interno">
+      <a href="index.html" class="logo" aria-label="Instituto Aruana - página inicial">
+        <span class="logo__marca" aria-hidden="true">A</span>
+        Instituto Aruana
+      </a>
+
+      <button class="menu-btn" id="menu-btn" type="button"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__barra"></span>
+        <span class="menu-btn__barra"></span>
+        <span class="menu-btn__barra"></span>
+      </button>
+
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <ul class="menu__lista">
+          <li><a href="index.html" class="menu__link">Início</a></li>
+
+          <li class="menu__item--sub">
+            <button class="menu__link menu__toggle" type="button"
+                    aria-expanded="false" aria-haspopup="true" aria-controls="submenu-projetos">
+              Projetos
+            </button>
+            <ul class="submenu" id="submenu-projetos">
+              <li><a class="menu__link" href="projetos.html">Todos os projetos</a></li>
+              <li><a class="menu__link" href="projetos.html#casos">Casos reais</a></li>
+              <li><a class="menu__link" href="projetos.html#como-ajudar">Como ajudar</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sistema-design.html" class="menu__link ativo" aria-current="page">Sistema de design</a></li>
+          <li><a href="cadastro.html" class="menu__link menu__link--destaque">Seja voluntário</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero-pagina">
+      <div class="container">
+        <h1>Sistema de design</h1>
+        <p>Tokens, grid, componentes e estados usados em todo o site do Instituto Aruana.</p>
+      </div>
+    </section>
+
+    <div class="container">
+
+      <section class="doc-secao" id="cores" aria-labelledby="t-cores">
+        <h2 id="t-cores">Paleta de cores</h2>
+        <p>17 variáveis CSS: primárias, secundárias, neutras e de feedback.</p>
+        <div class="grid-12 grid-12--compacto">
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-primaria-900)"></div>
+              <div class="amostra__info"><strong>Primária 900</strong><code>--cor-primaria-900</code><br><code>#1f4029</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-primaria-700)"></div>
+              <div class="amostra__info"><strong>Primária 700</strong><code>--cor-primaria-700</code><br><code>#2f5d3a</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-primaria-500)"></div>
+              <div class="amostra__info"><strong>Primária 500</strong><code>--cor-primaria-500</code><br><code>#4a8a5c</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-primaria-100)"></div>
+              <div class="amostra__info"><strong>Primária 100</strong><code>--cor-primaria-100</code><br><code>#dfeede</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-primaria-50)"></div>
+              <div class="amostra__info"><strong>Primária 50</strong><code>--cor-primaria-50</code><br><code>#eef6ec</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-secundaria-600)"></div>
+              <div class="amostra__info"><strong>Secundária 600</strong><code>--cor-secundaria-600</code><br><code>#e0a532</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-secundaria-500)"></div>
+              <div class="amostra__info"><strong>Secundária 500</strong><code>--cor-secundaria-500</code><br><code>#f2b84b</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-secundaria-100)"></div>
+              <div class="amostra__info"><strong>Secundária 100</strong><code>--cor-secundaria-100</code><br><code>#fdf1d6</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-texto)"></div>
+              <div class="amostra__info"><strong>Texto</strong><code>--cor-texto</code><br><code>#2b2b2b</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-texto-suave)"></div>
+              <div class="amostra__info"><strong>Texto suave</strong><code>--cor-texto-suave</code><br><code>#55645b</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-borda)"></div>
+              <div class="amostra__info"><strong>Borda</strong><code>--cor-borda</code><br><code>#d3ddd4</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-fundo)"></div>
+              <div class="amostra__info"><strong>Fundo</strong><code>--cor-fundo</code><br><code>#f4f7f2</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-superficie)"></div>
+              <div class="amostra__info"><strong>Superfície</strong><code>--cor-superficie</code><br><code>#ffffff</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-sucesso)"></div>
+              <div class="amostra__info"><strong>Sucesso</strong><code>--cor-sucesso</code><br><code>#1f7a3d</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-erro)"></div>
+              <div class="amostra__info"><strong>Erro</strong><code>--cor-erro</code><br><code>#b42318</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-aviso)"></div>
+              <div class="amostra__info"><strong>Aviso</strong><code>--cor-aviso</code><br><code>#93370d</code></div>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="amostra">
+              <div class="amostra__cor" style="--cor: var(--cor-info)"></div>
+              <div class="amostra__info"><strong>Info</strong><code>--cor-info</code><br><code>#175cd3</code></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="tipografia" aria-labelledby="t-tipo">
+        <h2 id="t-tipo">Tipografia hierárquica</h2>
+        <p>8 tamanhos de fonte. Os maiores se ajustam automaticamente à largura da tela (clamp).</p>
+        <div class="escala">
+          <div class="escala__linha"><code>var(--fs-3xl) — 3xl · 32–52px</code><span class="escala__exemplo" style="font-size: var(--fs-3xl)">Título principal</span></div>
+          <div class="escala__linha"><code>var(--fs-2xl) — 2xl · 28–36px</code><span class="escala__exemplo" style="font-size: var(--fs-2xl)">Título de seção</span></div>
+          <div class="escala__linha"><code>var(--fs-xl) — xl · 28px</code><span class="escala__exemplo" style="font-size: var(--fs-xl)">Subtítulo</span></div>
+          <div class="escala__linha"><code>var(--fs-lg) — lg · 22px</code><span class="escala__exemplo" style="font-size: var(--fs-lg)">Título de card</span></div>
+          <div class="escala__linha"><code>var(--fs-md) — md · 18px</code><span class="escala__exemplo" style="font-size: var(--fs-md)">Texto de destaque</span></div>
+          <div class="escala__linha"><code>var(--fs-base) — base · 16px</code><span class="escala__exemplo" style="font-size: var(--fs-base)">Texto padrão do site</span></div>
+          <div class="escala__linha"><code>var(--fs-sm) — sm · 14px</code><span class="escala__exemplo" style="font-size: var(--fs-sm)">Texto de apoio</span></div>
+          <div class="escala__linha"><code>var(--fs-xs) — xs · 12px</code><span class="escala__exemplo" style="font-size: var(--fs-xs)">Legendas e selos</span></div>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="espacamento" aria-labelledby="t-esp">
+        <h2 id="t-esp">Espaçamento modular</h2>
+        <p>Escala de 8px usada em margens, paddings e gaps.</p>
+        <div class="espaco"><code>var(--esp-1) = 8px</code><div class="espaco__barra" style="width: var(--esp-1)"></div></div>
+        <div class="espaco"><code>var(--esp-2) = 16px</code><div class="espaco__barra" style="width: var(--esp-2)"></div></div>
+        <div class="espaco"><code>var(--esp-3) = 24px</code><div class="espaco__barra" style="width: var(--esp-3)"></div></div>
+        <div class="espaco"><code>var(--esp-4) = 32px</code><div class="espaco__barra" style="width: var(--esp-4)"></div></div>
+        <div class="espaco"><code>var(--esp-6) = 48px</code><div class="espaco__barra" style="width: var(--esp-6)"></div></div>
+        <div class="espaco"><code>var(--esp-8) = 64px</code><div class="espaco__barra" style="width: var(--esp-8)"></div></div>
+      </section>
+
+      <section class="doc-secao" id="grid" aria-labelledby="t-grid">
+        <h2 id="t-grid">Grid de 12 colunas e breakpoints</h2>
+        <p>Redimensione a janela: as colunas abaixo mudam em cada breakpoint.</p>
+
+        <div class="demo">
+          <p class="demo__rotulo">col-12 col-sm-6 col-lg-3 (4 cards)</p>
+          <div class="grid-12 grid-12--compacto"><div class="col-12 col-sm-6 col-lg-3"><div class="demo-col">col-12 col-sm-6 col-lg-3</div></div><div class="col-12 col-sm-6 col-lg-3"><div class="demo-col">col-12 col-sm-6 col-lg-3</div></div><div class="col-12 col-sm-6 col-lg-3"><div class="demo-col">col-12 col-sm-6 col-lg-3</div></div><div class="col-12 col-sm-6 col-lg-3"><div class="demo-col">col-12 col-sm-6 col-lg-3</div></div></div>
+          <p class="demo__rotulo mt-3">col-12 col-md-8 + col-12 col-md-4</p>
+          <div class="grid-12 grid-12--compacto"><div class="col-12 col-md-8"><div class="demo-col">col-12 col-md-8</div></div><div class="col-12 col-md-4"><div class="demo-col">col-12 col-md-4</div></div></div>
+          <p class="demo__rotulo mt-3">col-6 col-md-3 (4 itens)</p>
+          <div class="grid-12 grid-12--compacto"><div class="col-6 col-md-3"><div class="demo-col">col-6 col-md-3</div></div><div class="col-6 col-md-3"><div class="demo-col">col-6 col-md-3</div></div><div class="col-6 col-md-3"><div class="demo-col">col-6 col-md-3</div></div><div class="col-6 col-md-3"><div class="demo-col">col-6 col-md-3</div></div></div>
+        </div>
+
+        <h3>Breakpoints (mobile-first)</h3>
+        <div class="tabela-rolavel">
+          <table class="tabela">
+            <thead><tr><th>Nome</th><th>A partir de</th><th>Dispositivo típico</th><th>Prefixo</th></tr></thead>
+            <tbody>
+              <tr><td>base</td><td>0</td><td>Celulares</td><td>col-N</td></tr>
+              <tr><td>xs</td><td>480px</td><td>Celulares grandes</td><td>col-xs-N</td></tr>
+              <tr><td>sm</td><td>640px</td><td>Celulares em paisagem / tablets pequenos</td><td>col-sm-N</td></tr>
+              <tr><td>md</td><td>768px</td><td>Tablets (menu horizontal aparece)</td><td>col-md-N</td></tr>
+              <tr><td>lg</td><td>1024px</td><td>Notebooks</td><td>col-lg-N</td></tr>
+              <tr><td>xl</td><td>1280px</td><td>Desktops</td><td>col-xl-N</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="botoes" aria-labelledby="t-botoes">
+        <h2 id="t-botoes">Botões e estados</h2>
+        <p>Passe o mouse, use Tab para ver o foco e clique para ver o estado ativo.</p>
+
+        <div class="demo">
+          <p class="demo__rotulo">Variantes</p>
+          <div class="botoes">
+            <button class="botao" type="button">Padrão</button>
+            <button class="botao botao--verde" type="button">Verde</button>
+            <button class="botao botao--contorno" type="button">Contorno</button>
+            <button class="botao botao--perigo" type="button">Perigo</button>
+            <button class="botao" type="button" disabled>Desabilitado</button>
+          </div>
+
+          <p class="demo__rotulo mt-3">Tamanhos</p>
+          <div class="botoes">
+            <button class="botao botao--verde botao--sm" type="button">Pequeno</button>
+            <button class="botao botao--verde" type="button">Médio</button>
+            <button class="botao botao--verde botao--lg" type="button">Grande</button>
+          </div>
+        </div>
+
+        <div class="demo demo--escuro mt-2">
+          <p class="demo__rotulo">Em fundo escuro</p>
+          <div class="botoes">
+            <button class="botao botao--claro" type="button">Claro</button>
+            <button class="botao botao--contorno-claro" type="button">Contorno claro</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="badges" aria-labelledby="t-badges">
+        <h2 id="t-badges">Badges e tags</h2>
+        <p>Selos para status/categoria e tags para palavras-chave.</p>
+        <div class="demo">
+          <p class="demo__rotulo">Badges</p>
+          <div class="botoes">
+            <span class="selo selo--primario">Primário</span>
+            <span class="selo selo--secundario">Secundário</span>
+            <span class="selo selo--sucesso">Sucesso</span>
+            <span class="selo selo--erro">Erro</span>
+            <span class="selo selo--aviso">Aviso</span>
+            <span class="selo selo--info">Info</span>
+            <span class="selo selo--solido selo--sem-ponto">Sólido</span>
+          </div>
+          <p class="demo__rotulo mt-3">Tags</p>
+          <div class="botoes">
+            <span class="tag">Cerrado</span><span class="tag">Mata Atlântica</span>
+            <a class="tag" href="projetos.html">Projetos</a><a class="tag" href="cadastro.html">Voluntariado</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="cards" aria-labelledby="t-cards">
+        <h2 id="t-cards">Cards</h2>
+        <p>Card de projeto (imagem + selo + ação) e card de princípio.</p>
+        <div class="grid-12 grid-12--esticado">
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="cartao">
+              <div class="cartao__img"><img src="imagens/lobo-guara.png" alt="Lobo-guará no campo" loading="lazy"></div>
+              <div class="cartao__corpo">
+                <div class="cartao__meta"><span class="selo selo--aviso">Ameaçado</span></div>
+                <h3 class="cartao__titulo">Card de projeto</h3>
+                <p class="cartao__texto">Imagem, selo, título, texto e botão no rodapé.</p>
+                <div class="cartao__rodape"><button class="botao botao--verde botao--sm" type="button">Saiba mais</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="cartao cartao--principio">
+              <h3 class="cartao__titulo">Card de princípio</h3>
+              <p class="cartao__texto">Somente texto, com destaque dourado no topo.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="cartao cartao--icone">
+              <span class="cartao__icone" aria-hidden="true">🌱</span>
+              <h3 class="cartao__titulo">Card com ícone</h3>
+              <p class="cartao__texto">Ícone circular acima do título.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="formularios" aria-labelledby="t-forms">
+        <h2 id="t-forms">Formulários e validação visual</h2>
+        <p>Estados: padrão, válido, inválido e desabilitado.</p>
+        <div class="demo">
+          <div class="formulario">
+            <div class="linha">
+              <div class="campo"><label for="d1">Campo padrão</label><input id="d1" type="text" placeholder="Digite algo"><p class="campo__msg">Texto de ajuda.</p></div>
+              <div class="campo valido"><label for="d2">Campo válido</label><input id="d2" type="text" value="Maria Silva"><p class="campo__msg">Tudo certo!</p></div>
+            </div>
+            <div class="linha">
+              <div class="campo invalido"><label for="d3">Campo inválido</label><input id="d3" type="email" value="maria@" aria-invalid="true"><p class="campo__msg">Digite um e-mail válido.</p></div>
+              <div class="campo"><label for="d4">Campo desabilitado</label><input id="d4" type="text" value="Indisponível" disabled><p class="campo__msg"></p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="doc-secao" id="feedback" aria-labelledby="t-feedback">
+        <h2 id="t-feedback">Alertas, toasts e modais</h2>
+        <p>Componentes de feedback ao usuário.</p>
+
+        <div class="demo">
+          <p class="demo__rotulo">Alertas</p>
+          <div class="grid-12 grid-12--compacto">
+            <div class="col-12 col-md-6"><div class="alerta alerta--sucesso" role="status"><span class="alerta__icone" aria-hidden="true">✓</span><div class="alerta__conteudo"><strong class="alerta__titulo">Sucesso</strong><p>Operação concluída.</p></div></div></div>
+            <div class="col-12 col-md-6"><div class="alerta alerta--erro" role="alert"><span class="alerta__icone" aria-hidden="true">✕</span><div class="alerta__conteudo"><strong class="alerta__titulo">Erro</strong><p>Não foi possível concluir.</p></div></div></div>
+            <div class="col-12 col-md-6"><div class="alerta alerta--aviso" role="status"><span class="alerta__icone" aria-hidden="true">!</span><div class="alerta__conteudo"><strong class="alerta__titulo">Aviso</strong><p>Revise os dados informados.</p></div></div></div>
+            <div class="col-12 col-md-6"><div class="alerta alerta--info" role="status"><span class="alerta__icone" aria-hidden="true">i</span><div class="alerta__conteudo"><strong class="alerta__titulo">Informação</strong><p>Inscrições abertas.</p></div><button class="botao-icone" type="button" data-alerta-fechar aria-label="Fechar alerta">×</button></div></div>
+          </div>
+
+          <p class="demo__rotulo mt-3">Toasts (clique para disparar)</p>
+          <div class="botoes">
+            <button class="botao botao--sm" type="button" data-toast="sucesso">Sucesso</button>
+            <button class="botao botao--sm botao--perigo" type="button" data-toast="erro">Erro</button>
+            <button class="botao botao--sm botao--contorno" type="button" data-toast="aviso">Aviso</button>
+            <button class="botao botao--sm botao--verde" type="button" data-toast="info">Info</button>
+          </div>
+
+          <p class="demo__rotulo mt-3">Modal</p>
+          <button class="botao botao--verde" type="button" data-modal-abrir="modal-demo">Abrir modal</button>
+        </div>
+      </section>
+    </div>
+
+    <dialog class="modal" id="modal-demo" aria-labelledby="modal-demo-titulo">
+      <div class="modal__cabecalho">
+        <h2 id="modal-demo-titulo">Exemplo de modal</h2>
+        <button class="botao-icone" type="button" data-modal-fechar aria-label="Fechar janela">×</button>
+      </div>
+      <div class="modal__corpo">
+        <p>Janela modal usando o elemento nativo <code>&lt;dialog&gt;</code>. Feche com o botão, a tecla Esc ou clicando no fundo escuro.</p>
+      </div>
+      <div class="modal__rodape">
+        <button class="botao botao--contorno" type="button" data-modal-fechar>Cancelar</button>
+        <button class="botao" type="button" data-modal-fechar>Confirmar</button>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__topo">
+      <div class="grid-12 grid-12--largo">
+        <div class="col-12 col-md-6 col-lg-5">
+          <h2>Instituto Aruana</h2>
+          <p>Protegendo a fauna e a natureza. Conectamos pessoas e iniciativas em defesa dos animais silvestres e dos ecossistemas brasileiros.</p>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3 lg-inicio-7">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="projetos.html#casos">Casos reais</a></li>
+            <li><a href="cadastro.html">Seja voluntário</a></li>
+            <li><a href="sistema-design.html">Sistema de design</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg-3">
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="mailto:contato@institutoaruana.org">contato@institutoaruana.org</a></li>
+            <li>São Paulo - SP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <div class="container">
+        &copy; 2026 Instituto Aruana. Projeto acadêmico demonstrativo.
+      </div>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/nav.js" defer></script>
+</body>
+</html>

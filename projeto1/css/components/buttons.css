@@ -1,0 +1,123 @@
+/* ==========================================================
+   BOTÕES — variantes e estados (hover, focus, active, disabled)
+   ========================================================== */
+
+.botao {
+  --botao-bg: var(--cor-secundaria-500);
+  --botao-bg-hover: var(--cor-secundaria-600);
+  --botao-cor: var(--cor-texto);
+  --botao-borda: transparent;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-1);
+  padding: 12px var(--esp-3);
+  background: var(--botao-bg);
+  color: var(--botao-cor);
+  border: 2px solid var(--botao-borda);
+  border-radius: var(--raio-sm);
+  font-size: var(--fs-base);
+  font-weight: var(--peso-forte);
+  line-height: 1.2;
+  text-decoration: none;
+  text-align: center;
+  transition: background var(--transicao), color var(--transicao),
+              border-color var(--transicao), transform var(--transicao),
+              box-shadow var(--transicao);
+}
+
+/* hover */
+.botao:hover {
+  background: var(--botao-bg-hover);
+  box-shadow: var(--sombra-md);
+  transform: translateY(-1px);
+}
+
+/* focus (teclado) */
+.botao:focus-visible {
+  outline: 3px solid var(--cor-primaria-700);
+  outline-offset: 3px;
+}
+
+/* active (clicado) */
+.botao:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: none;
+  filter: brightness(0.92);
+}
+
+/* disabled */
+.botao:disabled,
+.botao[aria-disabled="true"] {
+  background: #e3e8e4;
+  color: #8a968f;
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
+  filter: none;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ----- Variantes ----- */
+.botao--verde {
+  --botao-bg: var(--cor-primaria-700);
+  --botao-bg-hover: var(--cor-primaria-900);
+  --botao-cor: #fff;
+}
+
+.botao--claro {
+  --botao-bg: #fff;
+  --botao-bg-hover: var(--cor-primaria-100);
+  --botao-cor: var(--cor-primaria-700);
+}
+
+.botao--contorno {
+  --botao-bg: transparent;
+  --botao-bg-hover: var(--cor-primaria-100);
+  --botao-cor: var(--cor-primaria-700);
+  --botao-borda: var(--cor-primaria-700);
+}
+
+.botao--contorno-claro {
+  --botao-bg: transparent;
+  --botao-bg-hover: rgba(255, 255, 255, 0.15);
+  --botao-cor: #fff;
+  --botao-borda: #fff;
+}
+
+.botao--perigo {
+  --botao-bg: var(--cor-erro);
+  --botao-bg-hover: #8f1c12;
+  --botao-cor: #fff;
+}
+
+/* ----- Tamanhos ----- */
+.botao--sm { padding: 8px var(--esp-2); font-size: var(--fs-sm); }
+.botao--lg { padding: 16px var(--esp-4); font-size: var(--fs-md); }
+.botao--bloco { width: 100%; }
+
+/* Botão de ícone (fechar, etc.) */
+.botao-icone {
+  display: inline-grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: inherit;
+  font-size: var(--fs-lg);
+  line-height: 1;
+  transition: background var(--transicao);
+}
+
+.botao-icone:hover { background: rgba(0, 0, 0, 0.1); }
+
+/* Grupo de botões */
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+}

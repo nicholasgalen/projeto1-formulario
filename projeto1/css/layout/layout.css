@@ -1,0 +1,49 @@
+/* ==========================================================
+   LAYOUT PRINCIPAL — CSS Grid na estrutura geral da página
+   header | main | footer
+   ========================================================== */
+
+body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "topo"
+    "principal"
+    "rodape";
+  min-height: 100vh;
+}
+
+body > .topo   { grid-area: topo; }
+body > main    { grid-area: principal; }
+body > .rodape { grid-area: rodape; }
+
+/* Container centralizado com respiro lateral */
+.container {
+  width: 100%;
+  max-width: var(--largura-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Seções verticais */
+.secao {
+  padding-block: var(--esp-6);
+}
+
+.secao--suave {
+  background: var(--cor-primaria-100);
+}
+
+.secao--branca {
+  background: var(--cor-superficie);
+}
+
+@media (min-width: 1024px) {
+  .secao { padding-block: var(--esp-8); }
+}
+
+/* Âncoras não ficam escondidas atrás do menu fixo */
+[id] { scroll-margin-top: 90px; }
+
+.secao--sem-topo { padding-top: 0; }

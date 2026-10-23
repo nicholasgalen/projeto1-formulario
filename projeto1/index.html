@@ -4,170 +4,238 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Conheça o Instituto Aruana e suas iniciativas de proteção da fauna e da natureza brasileira.">
-
   <title>Início | Instituto Aruana</title>
-
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <a class="pular-link" href="#conteudo">Ir para o conteúdo</a>
+
   <header class="topo">
-    <a href="index.html" class="logo">Instituto Aruana</a>
+    <div class="container topo__interno">
+      <a href="index.html" class="logo" aria-label="Instituto Aruana - página inicial">
+        <span class="logo__marca" aria-hidden="true">A</span>
+        Instituto Aruana
+      </a>
 
-    <button
-      class="menu-btn"
-      aria-label="Abrir menu"
-      aria-expanded="false"
-      aria-controls="menu"
-      type="button"
-      >
-    </button>
+      <button class="menu-btn" id="menu-btn" type="button"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn__barra"></span>
+        <span class="menu-btn__barra"></span>
+        <span class="menu-btn__barra"></span>
+      </button>
 
-    <nav id="menu" aria-label="Menu principal">
-      <a href="index.html" class="ativo" aria-current="page">Início</a>
-      <a href="projetos.html">Projetos</a>
-      <a href="projetos.html#casos">Casos reais</a>
-      <a href="cadastro.html">Seja voluntário</a>
-    </nav>
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <ul class="menu__lista">
+          <li><a href="index.html" class="menu__link ativo" aria-current="page">Início</a></li>
+
+          <li class="menu__item--sub">
+            <button class="menu__link menu__toggle" type="button"
+                    aria-expanded="false" aria-haspopup="true" aria-controls="submenu-projetos">
+              Projetos
+            </button>
+            <ul class="submenu" id="submenu-projetos">
+              <li><a class="menu__link" href="projetos.html">Todos os projetos</a></li>
+              <li><a class="menu__link" href="projetos.html#casos">Casos reais</a></li>
+              <li><a class="menu__link" href="projetos.html#como-ajudar">Como ajudar</a></li>
+            </ul>
+          </li>
+
+          <li><a href="sistema-design.html" class="menu__link">Sistema de design</a></li>
+          <li><a href="cadastro.html" class="menu__link menu__link--destaque">Seja voluntário</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="destaque" aria-labelledby="titulo-destaque">
-      <div class="conteudo-destaque">
-        <p class="etiqueta">Protegendo a fauna e a natureza</p>
-
-        <h1 id="titulo-destaque">
-          Preservar hoje é garantir a vida de amanhã.
-        </h1>
-
-        <p>
-          O Instituto Aruana conecta pessoas e iniciativas em defesa dos
-          animais silvestres e dos ecossistemas brasileiros.
-        </p>
-
-        <a class="botao botao-claro" href="projetos.html">
-          Conheça nossos projetos
-        </a>
+  <main id="conteudo">
+    <div class="faixa-aviso">
+      <div class="container">
+        <div class="alerta alerta--info" role="status">
+          <span class="alerta__icone" aria-hidden="true">i</span>
+          <div class="alerta__conteudo">
+            <strong class="alerta__titulo">Inscrições abertas</strong>
+            <p>Faça seu cadastro e descubra como contribuir como voluntário.</p>
+          </div>
+          <button class="botao-icone" type="button" data-alerta-fechar aria-label="Fechar aviso">×</button>
+        </div>
       </div>
+    </div>
 
-      <img
-        src="imagens/fauna-brasileira.jpg"
-        alt="Arara em meio à vegetação brasileira"
-        width="560"
-        height="360"
-      >
+    <section class="hero" aria-labelledby="titulo-destaque">
+      <div class="container">
+        <div class="hero__caixa">
+          <div class="grid-12 grid-12--centro grid-12--largo">
+            <div class="col-12 col-md-7">
+              <span class="etiqueta">Protegendo a fauna e a natureza</span>
+              <h1 id="titulo-destaque">Preservar hoje é garantir a vida de amanhã.</h1>
+              <p>O Instituto Aruana conecta pessoas e iniciativas em defesa dos animais silvestres e dos ecossistemas brasileiros.</p>
+              <div class="botoes">
+                <a class="botao botao--claro" href="projetos.html">Conheça nossos projetos</a>
+                <a class="botao botao--contorno-claro" href="cadastro.html">Quero ser voluntário</a>
+              </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+              <img class="hero__imagem" src="imagens/fauna-brasileira.jpg"
+                   alt="Arara em meio à vegetação brasileira" width="560" height="360">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="secao" aria-labelledby="quem-somos">
-      <h2 id="quem-somos">Quem somos</h2>
-      <div class="linha-dourada" aria-hidden="true"></div>
-
-      <p class="texto-central">
-        O Instituto Aruana é uma organização dedicada à preservação da fauna
-        e da natureza. Nosso propósito é incentivar a conscientização
-        ambiental, apoiar a proteção de espécies ameaçadas e aproximar a
-        sociedade das causas ambientais.
-      </p>
+      <div class="container">
+        <h2 class="titulo-secao" id="quem-somos">Quem somos</h2>
+        <p class="texto-central">
+          O Instituto Aruana é uma organização dedicada à preservação da fauna e da natureza.
+          Nosso propósito é incentivar a conscientização ambiental, apoiar a proteção de espécies
+          ameaçadas e aproximar a sociedade das causas ambientais.
+        </p>
+      </div>
     </section>
 
-    <section class="secao secao-suave" aria-labelledby="principios">
-      <h2 id="principios">Nossos princípios</h2>
-      <div class="linha-dourada" aria-hidden="true"></div>
+    <section class="secao secao--suave" aria-labelledby="principios">
+      <div class="container">
+        <h2 class="titulo-secao cabecalho-secao" id="principios">Nossos princípios</h2>
 
-      <div class="grade">
-        <article class="cartao">
-          <h3>Missão</h3>
-          <p>
-            Contribuir para a proteção da fauna brasileira por meio de
-            educação ambiental, mobilização e ações de conservação.
-          </p>
-        </article>
+        <div class="grid-12">
+          <article class="col-12 col-md-4 cartao cartao--principio">
+            <h3 class="cartao__titulo">Missão</h3>
+            <p class="cartao__texto">Contribuir para a proteção da fauna brasileira por meio de educação ambiental, mobilização e ações de conservação.</p>
+          </article>
 
-        <article class="cartao">
-          <h3>Visão</h3>
-          <p>
-            Construir um futuro em que pessoas e natureza convivam de maneira
-            equilibrada e sustentável.
-          </p>
-        </article>
+          <article class="col-12 col-md-4 cartao cartao--principio">
+            <h3 class="cartao__titulo">Visão</h3>
+            <p class="cartao__texto">Construir um futuro em que pessoas e natureza convivam de maneira equilibrada e sustentável.</p>
+          </article>
 
-        <article class="cartao">
-          <h3>Valores</h3>
-          <p>
-            Respeito à vida, responsabilidade ambiental, transparência,
-            solidariedade e compromisso coletivo.
-          </p>
-        </article>
+          <article class="col-12 col-md-4 cartao cartao--principio">
+            <h3 class="cartao__titulo">Valores</h3>
+            <p class="cartao__texto">Respeito à vida, responsabilidade ambiental, transparência, solidariedade e compromisso coletivo.</p>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="secao" aria-labelledby="acoes">
-      <h2 id="acoes">Nossas áreas de atuação</h2>
-      <div class="linha-dourada" aria-hidden="true"></div>
+      <div class="container">
+        <h2 class="titulo-secao cabecalho-secao" id="acoes">Nossas áreas de atuação</h2>
 
-      <div class="grade">
-        <article class="cartao">
-          <h3>Proteção da fauna</h3>
-          <p>
-            Conscientização sobre espécies ameaçadas e a importância da
-            preservação dos habitats naturais.
-          </p>
-        </article>
+        <div class="grid-12">
+          <article class="col-12 col-sm-6 col-lg-4 cartao cartao--icone">
+            <span class="cartao__icone" aria-hidden="true">🐆</span>
+            <span class="selo selo--info">Pesquisa</span>
+            <h3 class="cartao__titulo">Proteção da fauna</h3>
+            <p class="cartao__texto">Conscientização sobre espécies ameaçadas e a importância da preservação dos habitats naturais.</p>
+          </article>
 
-        <article class="cartao">
-          <h3>Reflorestamento</h3>
-          <p>
-            Incentivo à recuperação de áreas verdes e à conservação da
-            biodiversidade.
-          </p>
-        </article>
+          <article class="col-12 col-sm-6 col-lg-4 cartao cartao--icone">
+            <span class="cartao__icone" aria-hidden="true">🌱</span>
+            <span class="selo selo--primario">Restauração</span>
+            <h3 class="cartao__titulo">Reflorestamento</h3>
+            <p class="cartao__texto">Incentivo à recuperação de áreas verdes e à conservação da biodiversidade.</p>
+          </article>
 
-        <article class="cartao">
-          <h3>Educação ambiental</h3>
-          <p>
-            Compartilhamento de conhecimento para estimular atitudes
-            sustentáveis no dia a dia.
-          </p>
-        </article>
+          <article class="col-12 col-sm-6 col-lg-4 cartao cartao--icone">
+            <span class="cartao__icone" aria-hidden="true">📚</span>
+            <span class="selo selo--secundario">Educação</span>
+            <h3 class="cartao__titulo">Educação ambiental</h3>
+            <p class="cartao__texto">Compartilhamento de conhecimento para estimular atitudes sustentáveis no dia a dia.</p>
+          </article>
+        </div>
       </div>
+    </section>
 
-      <p class="centro">
-        <a class="botao" href="projetos.html">Ver projetos</a>
-      </p>
+    <section class="secao secao--branca" aria-labelledby="destaques">
+      <div class="container">
+        <h2 class="titulo-secao cabecalho-secao" id="destaques">Projetos em destaque</h2>
+
+        <div class="grid-12">
+          <article class="col-12 col-md-6 col-lg-4 cartao">
+            <div class="cartao__img"><img src="imagens/onca-projeto.png" alt="Onça-pintada na mata" loading="lazy"></div>
+            <div class="cartao__corpo">
+              <div class="cartao__meta"><span class="selo selo--info">Pesquisa</span></div>
+              <h3 class="cartao__titulo">Projeto Onça-Pintada</h3>
+              <p class="cartao__texto">Monitoramento com armadilhas fotográficas e proteção de corredores ecológicos para o maior felino das Américas.</p>
+              <div class="cartao__rodape"><a class="botao botao--contorno botao--sm" href="projetos.html">Ver projetos</a></div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4 cartao">
+            <div class="cartao__img"><img src="imagens/cerrado.png" alt="Paisagem do Cerrado" loading="lazy"></div>
+            <div class="cartao__corpo">
+              <div class="cartao__meta"><span class="selo selo--primario">Restauração</span></div>
+              <h3 class="cartao__titulo">Recuperação do Cerrado</h3>
+              <p class="cartao__texto">Reflorestamento de áreas degradadas com espécies nativas, devolvendo abrigo e alimento à fauna.</p>
+              <div class="cartao__rodape"><a class="botao botao--contorno botao--sm" href="projetos.html">Ver projetos</a></div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4 cartao">
+            <div class="cartao__img"><img src="imagens/animal-silvestre.png" alt="Animal silvestre resgatado" loading="lazy"></div>
+            <div class="cartao__corpo">
+              <div class="cartao__meta"><span class="selo selo--aviso">Resgate</span></div>
+              <h3 class="cartao__titulo">Resgate de Animais Silvestres</h3>
+              <p class="cartao__texto">Atendimento, reabilitação e soltura de animais vítimas de tráfico, atropelamento e queimadas.</p>
+              <div class="cartao__rodape"><a class="botao botao--contorno botao--sm" href="projetos.html">Ver projetos</a></div>
+            </div>
+          </article>
+        </div>
+
+        <p class="texto-centro mt-4"><a class="botao botao--verde" href="projetos.html">Ver todos os projetos</a></p>
+      </div>
     </section>
 
     <section class="convite" aria-labelledby="participe">
-      <h2 id="participe">Faça parte dessa causa</h2>
-
-      <p>
-        Juntos podemos ampliar a proteção da nossa fauna. Cadastre-se e
-        descubra como contribuir.
-      </p>
-
-      <a class="botao botao-claro" href="cadastro.html">
-        Quero ser voluntário
-      </a>
+      <div class="container">
+        <h2 id="participe">Faça parte dessa causa</h2>
+        <p>Juntos podemos ampliar a proteção da nossa fauna. Cadastre-se e descubra como contribuir.</p>
+        <a class="botao botao--lg" href="cadastro.html">Quero ser voluntário</a>
+      </div>
     </section>
   </main>
 
   <footer class="rodape">
-    <p>
-      <strong>Instituto Aruana</strong> — Protegendo a fauna e a natureza
-    </p>
+    <div class="container rodape__topo">
+      <div class="grid-12 grid-12--largo">
+        <div class="col-12 col-md-6 col-lg-5">
+          <h2>Instituto Aruana</h2>
+          <p>Protegendo a fauna e a natureza. Conectamos pessoas e iniciativas em defesa dos animais silvestres e dos ecossistemas brasileiros.</p>
+        </div>
 
-    <p>
-      Contato:
-      <a href="mailto:contato@institutoaruana.org">
-        contato@institutoaruana.org
-      </a>
-      | São Paulo - SP
-    </p>
+        <div class="col-6 col-md-3 col-lg-3 lg-inicio-7">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projetos.html">Projetos</a></li>
+            <li><a href="projetos.html#casos">Casos reais</a></li>
+            <li><a href="cadastro.html">Seja voluntário</a></li>
+            <li><a href="sistema-design.html">Sistema de design</a></li>
+          </ul>
+        </div>
 
-    <small>
-      &copy; 2026 Instituto Aruana. Projeto acadêmico demonstrativo.
-    </small>
+        <div class="col-6 col-md-3 col-lg-3">
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="mailto:contato@institutoaruana.org">contato@institutoaruana.org</a></li>
+            <li>São Paulo - SP</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <div class="container">
+        &copy; 2026 Instituto Aruana. Projeto acadêmico demonstrativo.
+      </div>
+    </div>
   </footer>
 
-  <script src="js/index.js" defer></script>
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <script src="js/ui.js"></script>
+  <script src="js/nav.js" defer></script>
 </body>
 </html>

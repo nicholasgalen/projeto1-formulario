@@ -1,0 +1,46 @@
+/* ==========================================================
+   PÁGINA DE CADASTRO
+   Layout: duas colunas no desktop (formulário + painel lateral),
+   uma coluna no mobile.
+   ========================================================== */
+
+.cadastro { padding-block: var(--esp-6); }
+
+.cadastro__intro { margin-bottom: var(--esp-4); }
+.cadastro__intro p { margin-top: var(--esp-1); color: var(--cor-texto-suave); font-size: var(--fs-md); }
+
+.cadastro__aside {
+  padding: var(--esp-3);
+  background: var(--cor-primaria-700);
+  color: #fff;
+  border-radius: var(--raio-lg);
+}
+
+.cadastro__aside h2 { margin-bottom: var(--esp-2); color: #fff; font-size: var(--fs-lg); }
+.cadastro__aside img { margin-bottom: var(--esp-2); width: 100%; aspect-ratio: 16 / 10; object-fit: cover; border-radius: var(--raio-md); }
+
+.beneficios { display: grid; gap: var(--esp-2); }
+
+.beneficios li {
+  display: flex;
+  gap: var(--esp-1);
+  color: var(--cor-primaria-100);
+}
+
+.beneficios li::before {
+  content: "✓";
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  background: var(--cor-secundaria-500);
+  color: var(--cor-primaria-900);
+  border-radius: 50%;
+  font-size: var(--fs-xs);
+  font-weight: var(--peso-forte);
+}
+
+@media (min-width: 1024px) {
+  .cadastro__aside { position: sticky; top: 96px; padding: var(--esp-4); }
+}
